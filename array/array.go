@@ -1,7 +1,9 @@
 package array
 
 import (
+	"math/rand"
 	"reflect"
+	"time"
 )
 
 /**
@@ -26,4 +28,15 @@ func Index(arr interface{}, item interface{}) int {
 		}
 	}
 	return -1
+}
+
+// 选择数据中的某一个元素
+func Choice(arr interface{}) interface{} {
+	ref := reflect.ValueOf(arr)
+	switch ref.Type().Kind() {
+	case reflect.Slice, reflect.Array:
+		rand.Seed(time.Now().UnixNano())
+		return ref.Index(rand.Intn(ref.Len()))
+	}
+	return nil
 }

@@ -10,4 +10,4 @@ golang 实用工具库
 * Diff 返回数组之间的差集
 * Intersect 返回数组的交集
 * Reverse 返回数组倒序
-# Except 返回除去当前元素的数组
+* Except 返回除去当前元素的数组

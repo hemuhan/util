@@ -1,6 +1,8 @@
 package array
 
-import "testing"
+import (
+	"testing"
+)
 import "github.com/hemuhan/utils/array"
 
 func TestIndex(t *testing.T) {
@@ -16,4 +18,11 @@ func TestIndex(t *testing.T) {
 		t.Errorf("sn is not 1, sn value is :%d", n)
 	}
 
+}
+
+func TestChoine(t *testing.T) {
+	arr := [4]int{1, 2, 3, 4}
+	t.Log(array.Choice(arr))
+	t.Log(array.Choice(arr))
+	t.Log(array.Choice(arr))
 }
