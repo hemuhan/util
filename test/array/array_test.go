@@ -20,9 +20,9 @@ func TestIndex(t *testing.T) {
 
 }
 
-func TestChoine(t *testing.T) {
+func TestChoice(t *testing.T) {
 	arr := [4]int{1, 2, 3, 4}
-	t.Log(array.Choice(arr))
-	t.Log(array.Choice(arr))
+	t.Log(array.Choice(arr).(int))
+	t.Log(array.Choice(arr).(int))
 	t.Log(array.Choice(arr))
 }

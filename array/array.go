@@ -36,7 +36,7 @@ func Choice(arr interface{}) interface{} {
 	switch ref.Type().Kind() {
 	case reflect.Slice, reflect.Array:
 		rand.Seed(time.Now().UnixNano())
-		return ref.Index(rand.Intn(ref.Len()))
+		return ref.Index(rand.Intn(ref.Len())).Interface()
 	}
 	return nil
 }
