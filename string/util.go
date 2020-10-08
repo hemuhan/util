@@ -2,6 +2,7 @@ package string
 
 import (
 	"math/rand"
+	"strings"
 	"time"
 )
 
@@ -15,4 +16,12 @@ func RandomStr(l int) string {
 		result = append(result, bytes[r.Intn(len(bytes))])
 	}
 	return string(result)
+}
+
+func SnakeToCamel(input string) string {
+	var result []string
+	for _, s := range strings.Split(input, "_") {
+		result = append(result, strings.Title(s))
+	}
+	return strings.Join(result, "")
 }

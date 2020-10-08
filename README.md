@@ -9,7 +9,7 @@ golang 实用工具库
 
 #### String
 * RandomStr 生成随机字符串
-
+* SnakeToCamel 蛇形转驼峰
 
 ### 待开发清单
 #### Arrray
